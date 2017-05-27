@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ShihabThangalBloodBankAdmin</string>
+    <array name="blood_groups_array">
+        <item>Select Blood Group</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </array>
+    <array name="region_array">
+        <item>Select Region</item>
+        <item>North Kerala</item>
+        <item>South Kerala</item>
+        <item>Middle Kerala</item>
+    </array>
+</resources>

@@ -12,6 +12,10 @@ public class BloodDonor {
 public     String address1;
    public String address2;
     public  String region;
+
+    public BloodDonor() {
+    }
+
     public String pincode;
     public String phone_number1;
 

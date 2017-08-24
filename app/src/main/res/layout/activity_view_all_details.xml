@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    tools:context="com.machinser.shihabthangalbloodbankadmin.ViewAllDetails">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/menuNavigation1Button1Bg"
+        android:text="CLICK A DONOR FOR DELETION"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/lv"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#8BC34A</color>
+
+
+    <color name="primary_light">#C8E6C9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+
+    <color name="white">#ffffffff</color>
+    <color name="profile7colorPrimary">#8f26aa</color>
+    <color name="profile7colorPrimaryDark">#7824a1</color>
+    <color name="profile7colorAccent">#8f26aa</color>
+    <color name="profile7background">#f1f4f9</color>
+    <color name="menuNavigation1Button1Bg">#ff5718</color>
+    <color name="menuNavigation1Button2Bg">#0fb7a1</color>
+    <color name="menuNavigation1Button3Bg">#80b352</color>
+    <color name="menuNavigation1Button4Bg">#438ff5</color>
+    <color name="menuNavigation1Button5Bg">#fbba2d</color>
+    <color name="menuNavigation1Button6Bg">#d81d60</color>
+    <color name="activity5SplitterGray">#cddc39</color>
+    <color name="profile17fontGray">#999696</color>
+    <color name="activity5fontGray">#999696</color>
 </resources>

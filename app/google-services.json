@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "1027839134830",
+    "firebase_url": "https://shihabthangalbloodbank.firebaseio.com",
+    "project_id": "shihabthangalbloodbank",
+    "storage_bucket": "shihabthangalbloodbank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027839134830:android:17246779ef39ccf3",
+        "android_client_info": {
+          "package_name": "com.machinser.shihabthangalbloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027839134830-sccrfir8va4bvccman5shqr3jdd0of2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XDv1rlBiCxoc2mtvkDEnbHzHmzfO0SY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027839134830:android:7e5a15688b08f478",
+        "android_client_info": {
+          "package_name": "com.machinser.shihabthangalbloodbankadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027839134830-sccrfir8va4bvccman5shqr3jdd0of2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XDv1rlBiCxoc2mtvkDEnbHzHmzfO0SY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027839134830:android:78b1288c3e41a2c9",
+        "android_client_info": {
+          "package_name": "com.machinser.bloodgroupaniyaram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027839134830-sccrfir8va4bvccman5shqr3jdd0of2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5XDv1rlBiCxoc2mtvkDEnbHzHmzfO0SY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,14 +13,20 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.satsuware.usefulviews.LabelledSpinner;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener , LabelledSpinner.OnItemChosenListener{
     LabelledSpinner bloodgroup;
    LabelledSpinner region_spinner;
-    private String[] bloodgroups,regions;
+    private String[] bloodgroups;//,regions;
     private DatabaseReference databaseReference;
     private Button savel;
     private EditText full_name, age,address1_ed,address2_ed,phone_no;
@@ -30,6 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     boolean is_blood_group_ok = false;
     boolean is_region_ok = false;
 
+    DatabaseReference databaseReferenceregion;
+
+    ArrayAdapter<String> blood_group_adapter;// = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, bloodgroups);
+    ArrayAdapter<String> regions_adapter;// = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, regions);
+
+
+    ArrayList<String> regions;
 //    TextInputLayout
 
 
@@ -41,21 +54,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         region_spinner = (LabelledSpinner) findViewById(R.id.region);
         full_name = (EditText) findViewById(R.id.full_name);
         age = (EditText) findViewById(R.id.age);
-        savel = (Button) findViewById(R.id.save);
+
         address1_ed = (EditText) findViewById(R.id.address1);
         address2_ed = (EditText) findViewById(R.id.address2);
         phone_no = (EditText) findViewById(R.id.phone_number);
+
+        savel = (Button)findViewById(R.id.save);
         savel.setOnClickListener(this);
+        databaseReferenceregion = CusUtils.getDatabase().getReference().child("regions");
+        databaseReferenceregion.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                regions = new ArrayList<String>();
+                Region region = new Region();
+                regions.add("None");
+
+                Iterable<DataSnapshot> dataSnapshots = dataSnapshot.getChildren();
+                for(DataSnapshot dataSnapshot1:dataSnapshots){
+                    region = dataSnapshot1.getValue(Region.class);
+                    regions.add(region.region_name);
+
+                }
+
+                regions_adapter.notifyDataSetChanged();
+                region_spinner.setItemsArray(regions);
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
         bloodgroups = new String[]{"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
-        regions = new String[]{"North Kerala", "Middle Kerala", "South Kerala"};
-        ArrayAdapter<String> blood_group_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, bloodgroups);
-        ArrayAdapter<String> regions_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, regions);
+        blood_group_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, bloodgroups);
+        regions_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, regions);
 //        bloodgroup.setAdapter(blood_group_adapter);
         bloodgroup.setItemsArray(R.array.blood_groups_array);
-        region_spinner.setItemsArray(R.array.region_array);
         bloodgroup.setOnItemChosenListener(this);
         region_spinner.setOnItemChosenListener(this);
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        databaseReference = CusUtils.getDatabase().getReference().child("blood_donors");
 
 
     }
@@ -130,7 +173,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Do something here
                 break;
             case R.id.region:
-                String[] region_array =  getResources().getStringArray(R.array.region_array);
+                String[] region_array=new String[regions.size()];
+                regions.toArray(region_array);
                 region_text = region_array[position];
                 if(position == 0){
                     is_region_ok = false;

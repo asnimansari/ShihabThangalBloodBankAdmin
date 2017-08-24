@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context="com.machinser.shihabthangalbloodbankadmin.AddCategory">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="ADD REGION"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/newregion"
+        android:inputType="textCapWords"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:id="@+id/saveRegion"
+        android:text="SAVE REGION"
+
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/lv"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>

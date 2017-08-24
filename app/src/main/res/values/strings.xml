@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShihabThangalBloodBankAdmin</string>
+    <string name="app_name">Shihab Thangal BloodBank Admin</string>
     <array name="blood_groups_array">
         <item>Select Blood Group</item>
         <item>A+</item>

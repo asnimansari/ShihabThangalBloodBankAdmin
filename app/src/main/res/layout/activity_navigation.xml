@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    tools:context="com.machinser.shihabthangalbloodbankadmin.NavigationActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="5dp"
+
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:text="ADD REGION"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:id="@+id/cagtegory"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:text="ADD DONOR"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:id="@+id/adddonor"
+            android:layout_marginBottom="5dp"
+
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginBottom="5dp"
+
+            android:layout_width="match_parent"
+            android:text="VIEW/DELETE DONORS"
+            android:id="@+id/deletedonors"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
